@@ -1,4 +1,8 @@
+<!DOCTYPE HTML>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
 <html>
+<body>
 <h3>&nbsp;&nbsp;&nbsp;&nbsp;お問い合わせ</h3>
 
 <form action="form_output.php" method="get">
@@ -9,13 +13,12 @@
 <input type="radio" value="女" name="radiosex">女
 <input type="radio" value="不明" name="radiosex">不明<br />
 住所 <input type="textbox" name="add" style="width:260px"><br />
-電話番号 <input type="tel" name="tel1" maxlength="4" style="width:50px" required> -
-<input type="tel" name="tel2" maxlength="4" style="width:50px" required> -
-<input type="tel" name="tel3" maxlength="4" style="width:50px" required ><br />
-メールアドレス <input type="textbox" name="mail1" style="width:80px" required>＠
-<input type="textbox" name="mail2" style="width:80px" required><br />
-どこで知ったか　<input type="checkbox" name="checkbox1">雑誌
-<input type="checkbox" name="checkbox2">新聞<br />
+電話番号 <input type="tel" name="tel1" pattern="[0-9]*" maxlength="4" style="width:50px" required> -
+<input type="tel" name="tel2" pattern="[0-9]*" maxlength="4" style="width:50px" required> -
+<input type="tel" name="tel3" pattern="[0-9]*" maxlength="4" style="width:50px" required ><br />
+メールアドレス <input type="email" name="mail" style="width:160px" required><br />
+どこで知ったか　<input type="checkbox" name="checkbox[]" value="雑誌">雑誌
+<input type="checkbox" name="checkbox[]" value="新聞">新聞<br />
 質問カテゴリ <input type="textbox" name="ques"><br />
 <br />
 質問内容<br />
@@ -23,4 +26,5 @@
 <br /><input type="reset">&nbsp;&nbsp;&nbsp;<input type="submit">
 
 </form>
+</body>
 </html>

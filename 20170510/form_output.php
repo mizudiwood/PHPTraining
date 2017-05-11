@@ -9,7 +9,17 @@ echo $_GET['add'];
 echo "<br />";
 echo $_GET['tel1'],"-",$_GET['tel2'],"-",$_GET['tel3'];
 echo "<br />";
-echo $_GET['mail1'],"＠",$_GET['mail2'];
+echo $_GET['mail'];
+echo "<br />";
+
+$checkbox = $_POST['checkbox'];
+　　　　　
+
+//$checkbox[] = $_POST['checkbox[]'];
+for($i=0; $i<<count($checkbox); $i++){
+    echo $checkbox[$i];
+}
+
 
 ?>
 <br />
