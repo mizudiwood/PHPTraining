@@ -2,24 +2,27 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--cssを使う-->
 <link rel="stylesheet" href="task.css" type="text/css" />
 </style>
 </head>
 
-<?php
-echo "<h3>&nbsp;&nbsp;&nbsp;&nbsp;お問い合わせ</h3>" ;
-echo "・" . "<b>名前：</b>" . $_POST['name1'] . "&nbsp" .$_POST['name2'];
-echo "<br />" ;
-echo "・" . "<b>性别：</b>" . $_POST['radiosex'];
-echo "<br />";
-echo "・" . "<b>住所：</b>" . $_POST['add'];
-echo "<br />";
-echo "・" . "<b>電話番号：</b>" . $_POST['tel1'],"-",$_POST['tel2'],"-",$_POST['tel3'];
-echo "<br />";
-echo "・" . "<b>メールアドレス：</b>" . $_POST['mail'];
-echo "<br />";
+<body>
+<div class="bb">
+ <h3>お問い合わせ</h3>
+ <b>・名前：</b>  <?php echo $_POST['name1']; ?> &nbsp <?php echo $_POST['name2'];?>
+  <br />
+ <b>・性别：</b>  <?php echo $_POST['radiosex'];?>
+  <br />
+ <b>・住所：</b>  <?php echo $_POST['add'];?>
+  <br />
+ <b>・電話番号：</b>  <?php echo $_POST['tel1'],"-",$_POST['tel2'],"-",$_POST['tel3'];?>
+  <br />
+ <b>・メールアドレス：</b>  <?php echo $_POST['mail'];?>
+  <br />
 
-echo "・" . "<b>どこで知った：</b>";
+ <b>・どこで知った：</b>
+ <?php
 $checkbox = $_POST['checkbox'];
 
 for($i=0;$i<count($checkbox);$i++){
@@ -29,12 +32,17 @@ for($i=0;$i<count($checkbox);$i++){
             echo "、";
         }
 }
-echo "<br />";
-echo "・" . "<b>質問カテゴリ：</b>" . $_POST['ques'];
-echo "<br />";
-echo "・" . "<b>質問内容：</b>" . "<br />" . "<div>"  . $_POST['content']  . "</div>";
-
 ?>
+  <br />
+ <b>・質問カテゴリ：</b>  <?php echo $_POST['ques'];?>
+  <br />
+ <b>・質問内容：</b>
+ <br />
+ <div class="aa">  <?php echo $_POST['content'] ?></div>
+
+
 <br />
-<br /><input type="button" name="Submit" onclick="javascript:history.back(-1);" value="未入力状態でお書き直します">
+<input type="button" name="Submit" onclick="javascript:history.back(-1);" value="未入力状態でお書き直します">
+</div>
+</body>
 </html>
