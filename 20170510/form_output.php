@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!--cssを使う-->
-<link rel="stylesheet" href="task.css" type="text/css" />
+<link rel="stylesheet" href="form.css" type="text/css" />
 </style>
 </head>
 
@@ -23,15 +23,22 @@
 
  <b>・どこで知った：</b>
  <?php
-$checkbox = $_POST['checkbox'];
 
-for($i=0;$i<count($checkbox);$i++){
+ if(isset($_POST['checkbox'])){
+     $checkbox = $_POST['checkbox'];
 
-        echo "{$checkbox[$i]} ";
-        if ($i<count($checkbox)-1) {
-            echo "、";
-        }
-}
+     for($i=0;$i<count($checkbox);$i++){
+
+             echo "{$checkbox[$i]} ";
+             if ($i<count($checkbox)-1) {
+                 echo "、";
+             }
+     }
+ }
+ else {
+     echo "不明";
+ }
+
 ?>
   <br />
  <b>・質問カテゴリ：</b>  <?php echo $_POST['ques'];?>
@@ -40,9 +47,9 @@ for($i=0;$i<count($checkbox);$i++){
  <br />
  <div class="aa">  <?php echo $_POST['content'] ?></div>
 
-
 <br />
-<input type="button" name="Submit" onclick="javascript:history.back(-1);" value="未入力状態でお書き直します">
+&nbsp;&nbsp;&nbsp;<input type="button" name="Submit" onclick="javascript:history.back(-1);" value="書き直す">
+<br /><br />
 </div>
 </body>
 </html>

@@ -7,34 +7,43 @@
 </head>
 
 <body>
-<h3>お問い合わせ</h3>
 
-<form action="form_output.php" method="post">
 
-姓 <input type="textbox" name="name1" required><br />
-名 <input type="textbox" name="name2" required><br />
+<form action="form_output.php" method="post" class="basic-grey">
 
-性别 <input type="radio" value="男" name="radiosex" checked="checked">男
+<h1>お問い合わせ</h1>
+
+
+
+<b>姓</b>
+<input type="text" name="name1" placeholder="あなたの苗字" style="width:333px" required><br />
+
+
+<b>名</b>
+<input type="text" name="name2" placeholder="あなたの名前" style="width:333px" required><br />
+
+<b>性别</b> <input type="radio" value="男" name="radiosex" checked="checked">男
 <input type="radio" value="女" name="radiosex">女
 <input type="radio" value="不明" name="radiosex">不明<br />
+<br />
+<b>住所</b> <input type="text" name="add" placeholder="あなたの住所" style="width:320px"><br />
 
-住所 <input type="textbox" name="add" style="width:260px"><br />
-
-電話番号 <input type="tel" name="tel1" pattern="[0-9]*" maxlength="4" style="width:50px" required> -
+<b>電話番号</b> <input type="tel" name="tel1" pattern="[0-9]*" maxlength="4" style="width:50px" required> -
 <input type="tel" name="tel2" pattern="[0-9]*" maxlength="4" style="width:50px" required> -
 <input type="tel" name="tel3" pattern="[0-9]*" maxlength="4" style="width:50px" required ><br />
 
-メールアドレス <input type="email" name="mail" style="width:160px" required><br />
+<b>メールアドレス</b> <input type="email" name="mail" placeholder="あなたのメールアドレス" style="width:273px" required><br />
 
-どこで知ったか　
+<b>どこで知ったか</b>　
 <input type="checkbox" name="checkbox[]" value="雑誌">雑誌
-<input type="checkbox" name="checkbox[]" value="新聞">新聞<br />
+<input type="checkbox" name="checkbox[]" value="新聞">新聞
+<br /><br />
+<b>質問カテゴリ</b><br /> <input type="text" name="ques" ><br />
 
-質問カテゴリ <input type="textbox" name="ques"><br />
-<br />
-質問内容<br />
-<textarea name="content" style="width:300px; height:200px;">内容を入力してください。</textarea><br />
-<br /><input type="reset">&nbsp;&nbsp;&nbsp;<input type="submit">
+<b>質問内容</b><br />
+<textarea name="content" placeholder="内容を入力してください。" ></textarea><br />
+
+<input type="reset"  class="button" >&nbsp;&nbsp;&nbsp;<input type="submit" class="button" >
 
 </form>
 
