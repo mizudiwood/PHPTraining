@@ -1,25 +1,30 @@
 <?php
+echo "<h3>&nbsp;&nbsp;&nbsp;&nbsp;お問い合わせ</h3>" ;
+echo "・" . "名前：" . $_POST['name1'] . "&nbsp" .$_POST['name2'];
+echo "<br />" ;
+echo "・" . "性别：" . $_POST['radiosex'];
+echo "<br />";
+echo "・" . "住所：" . $_POST['add'];
+echo "<br />";
+echo "・" . "電話番号：" . $_POST['tel1'],"-",$_POST['tel2'],"-",$_POST['tel3'];
+echo "<br />";
+echo "・" . "メールアドレス：" . $_POST['mail'];
+echo "<br />";
 
-echo $_GET['name1'];
-echo $_GET['name2'];
-echo "<br />";
-echo $_GET['radiosex'];
-echo "<br />";
-echo $_GET['add'];
-echo "<br />";
-echo $_GET['tel1'],"-",$_GET['tel2'],"-",$_GET['tel3'];
-echo "<br />";
-echo $_GET['mail'];
-echo "<br />";
-
+echo "・" . "どこで知ったか：";
 $checkbox = $_POST['checkbox'];
-　　　　　
 
-//$checkbox[] = $_POST['checkbox[]'];
-for($i=0; $i<<count($checkbox); $i++){
-    echo $checkbox[$i];
+for($i=0;$i<count($checkbox);$i++){
+
+        echo "{$checkbox[$i]} ";
+        if ($i<count($checkbox)-1) {
+            echo "、";
+        }
 }
-
+echo "<br />";
+echo "・" . "質問カテゴリ：" . $_POST['ques'];
+echo "<br />";
+echo "・" . "質問内容：" . "<br />" . "<div>"  . $_POST['content']  . "</div>";
 
 ?>
 <br />
