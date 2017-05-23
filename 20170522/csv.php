@@ -66,7 +66,48 @@
                fclose($myfile);
            }
 
-
-            echo "お問い合わせありがとうございました！" . "<br>";
-            echo "お問い合わせ番号:" . "$number";
 ?>
+<!DOCTYPE HTML>
+
+
+<html>
+<head>
+<link rel="stylesheet" href="form.css" type="text/css"/>
+<style>
+
+.btn {
+background: #E27575;
+border: none;
+padding: 10px 25px 10px 25px;
+color: #FFF;
+box-shadow: 1px 1px 5px #B6B6B6;
+border-radius: 3px;
+text-shadow: 1px 1px 1px #9E3F3F;
+cursor: pointer;
+margin: auto;
+}
+.btn:hover {
+background: #CF7A7A
+}
+
+.btn:active {
+    position:relative;
+    top:1px;
+}
+
+
+</style>
+
+
+</head>
+<body>
+    <div class="cc">
+    <h4>お問い合わせありがとうございました！</h4>
+    <h5>お問い合わせ番号: <?php echo $number; ?></h5>
+    <input type="button" class="btn" onclick="location.href='list.php'" value="お問い合わせ一覧">
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</div>
+</body>
+
+
+</html>

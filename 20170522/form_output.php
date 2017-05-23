@@ -33,7 +33,7 @@ background: #CF7A7A
 
 <body>
 <div class="bb">
- <h3>お問い合わせ</h3>
+ <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;お問い合わせ</h3>
  <b>・名前：</b>  <?php echo $_POST['name1']; ?> &nbsp <?php echo $_POST['name2'];?>
   <br />
  <b>・性别：</b>  <?php echo $_POST['radiosex'];?>
