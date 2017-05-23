@@ -9,22 +9,7 @@
             fwrite($myfile, " " . $_GET['tel1'] . " " . $_GET['tel2'] . " " . $_GET['tel3']);
             fwrite($myfile, " " . $_GET['mail']);
 
-            if(isset($_GET['checkbox'])){
-                $checkbox = $_GET['checkbox'];
-                $count = count($checkbox);
-    //            echo "$checkbox" . "<br>";
-    //            echo "$count";
-                fwrite($myfile, " " . $count);
-
-                for($i=0;$i<$count;$i++){
-    //                    echo "$checkbox[$i]";
-                        fwrite($myfile, " " . $checkbox[$i]);
-                }
-            }
-                else {
-                   $count = 0;
-                   fwrite($myfile, " " . 0);
-                }
+            fwrite($myfile, " " . $_GET['a']);
 
             fwrite($myfile, " " . $_GET['ques'] . " " . $_GET['content']. "\r\n");
             fclose($myfile);

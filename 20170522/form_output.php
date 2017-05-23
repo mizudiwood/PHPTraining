@@ -85,7 +85,25 @@ background: #CF7A7A
  <input name="tel3" type="hidden" value="<?php echo $_POST['tel3']; ?>">
  <input name="mail" type="hidden" value="<?php echo $_POST['mail']; ?>">
 
- <input name="checkbox" type="hidden" value=" ">
+<?php
+ if(isset($_POST['checkbox'])){
+     $checkbox = $_POST['checkbox'];
+//     echo "$checkbox" . "<br>";
+  if(count($checkbox)==1){
+     $a = "1" . " " . "$checkbox[0]";
+    }
+  if(count($checkbox)==2){
+       $a = "2" . " " . "$checkbox[0]" . " " . "$checkbox[1]";
+      }
+ }
+ else{
+     $a = 0 ;
+ }
+
+?>
+
+<input type="hidden" name="a" value="<?php echo $a; ?>">
+
 
  <input name="ques" type="hidden" value="<?php echo $_POST['ques']; ?>">
  <input name="content" type="hidden" value="<?php echo $_POST['content']; ?>">
