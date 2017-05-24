@@ -1,7 +1,7 @@
 div.aa{margin:10px; border-style:solid; width:300px; height:auto; border-width:1px; border-color:#888; background-color: #F7F7F7}
 div.bb{color: #888; margin:0 auto; border-style:solid; width:350px; height:auto; border-width:1px; border-color:#888; background-color: #E4E4E4}
 div.cc{text-align:center; color: #888; margin:0 auto; border-style:solid; width:350px; height:auto; border-width:1px; border-color:#888; background-color: #E4E4E4}
-div.dd{text-align:center; color: #888; margin:0 auto; border-style:solid; width:900px; height:auto; border-width:1px; border-color:#888; background-color: #E4E4E4}
-
+div.dd{text-align:center; color: #888; margin:0 auto; border-style:solid; width:auto; height:auto; overflow-x:hidden;overflow-y:hidden; border-width:1px; border-color:#888; background-color: #E4E4E4}
+td{overflow:hidden;}
 h4{text-align:center; border-bottom:1px solid #E4E4E4}
 h5{text-align:center; border-bottom:1px solid #E5E5E5}
