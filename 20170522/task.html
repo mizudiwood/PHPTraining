@@ -13,11 +13,8 @@
 
 <h1>お問い合わせ</h1>
 
-
-
 <b>姓</b>
 <input type="text" name="name1" placeholder="あなたの苗字" style="width:333px" required><br />
-
 
 <b>名</b>
 <input type="text" name="name2" placeholder="あなたの名前" style="width:333px" required><br />
@@ -26,6 +23,7 @@
 <input type="radio" value="女" name="radiosex">女
 <input type="radio" value="不明" name="radiosex">不明<br />
 <br />
+
 <b>住所</b> <input type="text" name="add" placeholder="あなたの住所" style="width:320px"><br />
 
 <b>電話番号</b> <input type="tel" name="tel1" pattern="[0-9]*" maxlength="4" style="width:50px" required> -
@@ -38,8 +36,15 @@
 <input type="checkbox" name="checkbox[]" value="雑誌">雑誌
 <input type="checkbox" name="checkbox[]" value="新聞">新聞
 <br /><br />
-<b>質問カテゴリ</b><br /> <input type="text" name="ques" ><br />
 
+<b>質問カテゴリ</b><br />
+<select name="ques" style="width:200px">
+<option value="未選択"></option>
+<option value="Aについて">Aについて</option>
+<option value="Bについて">Bについて</option>
+</select>
+
+<br />
 <b>質問内容</b><br />
 <textarea name="content" placeholder="内容を入力してください。" ></textarea><br />
 

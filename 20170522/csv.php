@@ -27,9 +27,7 @@
 
             fwrite($myfile, " " . $_GET['a']);//どこで知ったか
             //質問カテゴリ
-            if($_GET['ques'] != "")
             fwrite($myfile, " " . $_GET['ques']);
-            else fwrite($myfile, " " . "未入力");
             //質問内容
             if($_GET['content'] != "")
             fwrite($myfile, " " . $_GET['content'] . "\r\n");
@@ -45,17 +43,15 @@
                $number = 1;
     //           fwrite($myfile, $number . "\r\n");
 
-               fwrite($myfile, $_GET['name1'] . " " . $_GET['name2']);
-               fwrite($myfile, " " . $_GET['radiosex'] . " " . $_GET['add']);
-               fwrite($myfile, " " . $_GET['tel1'] . " " . $_GET['tel2'] . " " . $_GET['tel3']);
-               fwrite($myfile, " " . $_GET['mail']);
+               fwrite($myfile, $_GET['name1'] . " " . $_GET['name2']);//氏名
+               fwrite($myfile, " " . $_GET['radiosex'] . " " . $_GET['add']);//性別、住所
+               fwrite($myfile, " " . $_GET['tel1'] . " " . $_GET['tel2'] . " " . $_GET['tel3']);//電話番号
+               fwrite($myfile, " " . $_GET['mail']);//メールアドレス
 
-               fwrite($myfile, " " . $_GET['a']);
+               fwrite($myfile, " " . $_GET['a']);//どこで知ったか
 
                //質問カテゴリ
-               if(isset($_POST['ques']))
                fwrite($myfile, " " . $_GET['ques']);
-               else fwrite($myfile, " " . "未入力");
                //質問内容
                if(isset($_POST['content']))
                fwrite($myfile, " " . $_GET['content'] . "\r\n");
@@ -66,11 +62,11 @@
 
             if (file_exists($counterfile) )
             {
-           $fp = fopen( "counter.txt", "r+" ); // ファイル開く
+               $fp = fopen( "counter.txt", "r+" ); // ファイル開く
 
-           rewind( $fp ); // ファイルポインタを先頭に戻す
-           fputs( $fp, $number ); // 値書き込み
-           fclose( $fp ); // ファイル閉じる
+               rewind( $fp ); // ファイルポインタを先頭に戻す
+               fputs( $fp, $number ); // 値書き込み
+               fclose( $fp ); // ファイル閉じる
            }
 
            else {
@@ -82,7 +78,6 @@
 
 ?>
 <!DOCTYPE HTML>
-
 
 <html>
 <head>
@@ -109,9 +104,7 @@ background: #CF7A7A
     top:1px;
 }
 
-
 </style>
-
 
 </head>
 <body>
@@ -122,6 +115,5 @@ background: #CF7A7A
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </div>
 </body>
-
 
 </html>

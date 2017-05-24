@@ -25,9 +25,7 @@ background: #CF7A7A
     top:1px;
 }
 
-
 </style>
-
 
 </head>
 
@@ -66,6 +64,7 @@ background: #CF7A7A
 
 ?>
   <br />
+
  <b>・質問カテゴリ：</b>  <?php echo $_POST['ques'];?>
   <br />
  <b>・質問内容：</b>
@@ -74,7 +73,7 @@ background: #CF7A7A
 
  <br />
 
-
+<!--パラメーター送信-->
  <form action="csv.php" method="get">
  <input name="name1" type="hidden" value="<?php echo $_POST['name1']; ?>">
  <input name="name2" type="hidden" value="<?php echo $_POST['name2']; ?>">
