@@ -96,6 +96,7 @@ echo "</td>";
 $where = $arr[8];
 if($where==0){
     echo "<td>";
+    echo "未選択";
     echo "</td>";
 }
 else{
@@ -112,7 +113,10 @@ else{
 //質問カテゴリ
 $q=$where + 9;
 echo "<td>";
+if($arr[$q] != NULL){
 echo "$arr[$q]";
+}
+else echo "";
 echo "</td>";
 //質問内容
 $qw=$where + 10;
@@ -124,6 +128,10 @@ echo "</td>";
 }
   ?>
 </table>
+<br />
+<input type="button" class="btn" onclick="location.href='task.html'" value="お問い合わせへ戻る">
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  </div>
 </body>
 

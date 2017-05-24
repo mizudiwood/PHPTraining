@@ -20,14 +20,21 @@
             $number= $number +1; // 値+1（カウントアップ）
 
 
-            fwrite($myfile, $_GET['name1'] . " " . $_GET['name2']);
-            fwrite($myfile, " " . $_GET['radiosex'] . " " . $_GET['add']);
-            fwrite($myfile, " " . $_GET['tel1'] . " " . $_GET['tel2'] . " " . $_GET['tel3']);
-            fwrite($myfile, " " . $_GET['mail']);
+            fwrite($myfile, $_GET['name1'] . " " . $_GET['name2']);//氏名
+            fwrite($myfile, " " . $_GET['radiosex'] . " " . $_GET['add']);//性別、住所
+            fwrite($myfile, " " . $_GET['tel1'] . " " . $_GET['tel2'] . " " . $_GET['tel3']);//電話番号
+            fwrite($myfile, " " . $_GET['mail']);//メールアドレス
 
-            fwrite($myfile, " " . $_GET['a']);
+            fwrite($myfile, " " . $_GET['a']);//どこで知ったか
+            //質問カテゴリ
+            if($_GET['ques'] != "")
+            fwrite($myfile, " " . $_GET['ques']);
+            else fwrite($myfile, " " . "未入力");
+            //質問内容
+            if($_GET['content'] != "")
+            fwrite($myfile, " " . $_GET['content'] . "\r\n");
+            else fwrite($myfile, " " . "未入力" . "\r\n");
 
-            fwrite($myfile, " " . $_GET['ques'] . " " . $_GET['content']. "\r\n");
             fclose($myfile);
             }
 
@@ -45,7 +52,14 @@
 
                fwrite($myfile, " " . $_GET['a']);
 
-               fwrite($myfile, " " . $_GET['ques'] . " " . $_GET['content'] . "\r\n");
+               //質問カテゴリ
+               if(isset($_POST['ques']))
+               fwrite($myfile, " " . $_GET['ques']);
+               else fwrite($myfile, " " . "未入力");
+               //質問内容
+               if(isset($_POST['content']))
+               fwrite($myfile, " " . $_GET['content'] . "\r\n");
+               else fwrite($myfile, " " . "未入力" . "\r\n");
                fclose($myfile);
             }
 
