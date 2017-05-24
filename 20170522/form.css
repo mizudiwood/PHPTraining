@@ -1,20 +1,31 @@
-div.aa{margin:10px; border-style:solid; width:300px; height:auto; border-width:1px; border-color:#888; background-color: #F7F7F7}
-div.bb{color: #888; margin:0 auto; border-style:solid; width:350px; height:auto; border-width:1px; border-color:#888; background-color: #E4E4E4}
-div.cc{text-align:center; color: #888; margin:0 auto; border-style:solid; width:350px; height:auto; border-width:1px; border-color:#888; background-color: #E4E4E4}
-div.dd{text-align:center; color: #888; margin:0 auto; border-style:solid; width:auto; height:auto; overflow-x:hidden;overflow-y:hidden; border-width:1px; border-color:#888; background-color: #E4E4E4}
+div.aa{margin:10px 10px 0px 10px;padding:10px 10px 10px 10px; border-style:solid; width:300px; height:auto; border-width:1px; border-color:#888; background-color: #F7F7F7}
+div.bb{padding:10px 20px 20px 20px;color: #888; margin:0 auto; border-style:solid; width:350px; height:auto; border-width:1px; border-color:#888; background-color: #E4E4E4}
+div.cc{padding:10px 20px 20px 20px;text-align:center; color: #888; margin:0 auto; border-style:solid; width:350px; height:auto; border-width:1px; border-color:#888; background-color: #E4E4E4}
+div.dd{padding:10px 20px 20px 20px;text-align:center; color: #888; margin:0 auto; border-style:solid; width:auto; height:auto; overflow-x:hidden;overflow-y:hidden; border-width:1px; border-color:#888; background-color: #E4E4E4}
 
 h4{text-align:center; border-bottom:1px solid #E4E4E4}
 h5{text-align:center; border-bottom:1px solid #E5E5E5}
 
 table{
     border-collapse:collapse;
-    /*table-layout:fixed; 只有定义了表格的布局算法为fixed，下面td的定义才能起作用。 */
+    table-layout:fixed; /*只有定义了表格的布局算法为fixed，下面td的定义才能起作用。 */
     height:100px;
+    table-layout: auto;
+}
+table th{
+    background-color: #E27575;
+    color: #FFFFFF;
+    border-collapse:collapse;
+    white-space:nowrap;
+    /*table-layout:fixed; 只有定义了表格的布局算法为fixed，下面td的定义才能起作用。 */
+    height:30px;
 }
 table td{
     border-color:gray;
     word-break:break-all;/* 不换行 */
-    white-space:nowrap;/* 不换行 */
+
+     white-space:nowrap;
     overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */
+
     text-overflow:ellipsis;/* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
 }

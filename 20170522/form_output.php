@@ -111,7 +111,6 @@ background: #CF7A7A
 &nbsp;&nbsp;&nbsp;<input type="button" class="btn" onclick="javascript:history.back(-1);" value="戻る">
 
 </form>
-<br /><br />
 </div>
 </body>
 

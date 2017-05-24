@@ -64,10 +64,10 @@ background: #CF7A7A
 
           echo "<tr>";
           //ID番号
-          echo "<td>";
+          echo "<td><b>";
           $no = $i +1;
           echo "$no";
-          echo "</td>";
+          echo "</b></td>";
           //氏名
           echo "<td>";
           echo "$arr[0]" . " " . "$arr[1]";
@@ -123,8 +123,7 @@ background: #CF7A7A
      </table>
 <br />
      <input type="button" class="btn" onclick="location.href='task.html'" value="お問い合わせへ戻る">
-<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
     </div>
 </body>
 

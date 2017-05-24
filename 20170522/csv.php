@@ -112,7 +112,7 @@ background: #CF7A7A
     <h4>お問い合わせありがとうございました！</h4>
     <h5>お問い合わせ番号: <?php echo $number; ?></h5>
     <input type="button" class="btn" onclick="location.href='list.php'" value="お問い合わせ一覧">
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
 </div>
 </body>
 
