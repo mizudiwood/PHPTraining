@@ -15,6 +15,7 @@ box-shadow: 1px 1px 5px #B6B6B6;
 border-radius: 3px;
 text-shadow: 1px 1px 1px #9E3F3F;
 cursor: pointer;
+text-align: center;
 }
 .btn:hover {
 background: #CF7A7A
@@ -31,19 +32,21 @@ background: #CF7A7A
 
 <body>
 <div class="bb">
- <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;お問い合わせ</h3>
- <b>・名前：</b>  <?php echo $_POST['name1']; ?> &nbsp <?php echo $_POST['name2'];?>
-  <br />
- <b>・性别：</b>  <?php echo $_POST['radiosex'];?>
-  <br />
- <b>・住所：</b>  <?php echo $_POST['add'];?>
-  <br />
- <b>・電話番号：</b>  <?php echo $_POST['tel1'],"-",$_POST['tel2'],"-",$_POST['tel3'];?>
-  <br />
- <b>・メールアドレス：</b>  <?php echo $_POST['mail'];?>
-  <br />
 
- <b>・どこで知った：</b>
+
+ <h3>お問い合わせ</h3>
+ <div class="ee"><b>・名前：</b> <?php echo $_POST['name1']; ?> &nbsp <?php echo $_POST['name2'];?></div>
+
+ <div class="ee"><b>・性别：</b>  <?php echo $_POST['radiosex'];?></div>
+
+ <div class="ee"><b>・住所：</b>  <?php echo $_POST['add'];?></div>
+
+ <div class="ee"><b>・電話番号：</b>  <?php echo $_POST['tel1'],"-",$_POST['tel2'],"-",$_POST['tel3'];?></div>
+
+ <div class="ee"><b>・メールアドレス：</b>  <?php echo $_POST['mail'];?></div>
+
+
+ <div class="ee" ><b>・どこで知った：</b>
  <?php
 
  if(isset($_POST['checkbox'])){
@@ -62,15 +65,14 @@ background: #CF7A7A
      echo "不明";
  }
 
-?>
-  <br />
+?></div>
 
- <b>・質問カテゴリ：</b>  <?php echo $_POST['ques'];?>
-  <br />
- <b>・質問内容：</b>
- <br />
+ <div class="ee"><b>・質問カテゴリ：</b>  <?php echo $_POST['ques'];?></div>
+
+ <div class="ee"><b>・質問内容：</b>
+
  <div class="aa">  <?php echo $_POST['content'] ?></div>
-
+</div>
  <br />
 
 <!--パラメーター送信-->

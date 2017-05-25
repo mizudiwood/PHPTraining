@@ -18,29 +18,24 @@ cursor: pointer;
 background: #CF7A7A
 }
 
-.btn:active {
-    position:relative;
-    top:1px;
-}
-
 </style>
 </head>
 
 <body>
-    <div class="dd">
-     <h3>お問い合わせ一覧</h3>
-
+    <div class="dd" >
+     <div class= "ff"><h3 >お問い合わせ一覧</h3></div>
+<div class= "ff">
      <table border="1" align="center" >
   <tr>
-    <th width="20px">No.</th>
+    <th width="15px">No.</th>
     <th width="70px">氏名</th>
-    <th width="30px">性別</th>
-    <th width="100px">住所</th>
-    <th width="90px">電話番号</th>
-    <th width="30px">メールアドレス</th>
-    <th width="80px">どこで知ったか</th>
-    <th width="100px">質問カテゴリ</th>
-    <th width="100px">質問内容</th>
+    <th width="20px">性別</th>
+    <th width="120px">住所</th>
+    <th width="80px">電話番号</th>
+    <th width="120px">メールアドレス</th>
+    <th width="70px">どこで知ったか</th>
+    <th width="60px">質問カテゴリ</th>
+    <th width="120px">質問内容</th>
   </tr>
 
   <?php
@@ -121,9 +116,10 @@ background: #CF7A7A
   }
   ?>
      </table>
-<br />
-     <input type="button" class="btn" onclick="location.href='task.html'" value="お問い合わせへ戻る">
-
+     </div>
+<div class= "ff">
+     <input type="button" class="btn" onclick="location.href='task.html'" value="お問い合わせへ戻る" style="font-size: 15px;">
+</div>
     </div>
 </body>
 

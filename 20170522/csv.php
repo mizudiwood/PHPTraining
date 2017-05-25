@@ -99,11 +99,6 @@ margin: auto;
 background: #CF7A7A
 }
 
-.btn:active {
-    position:relative;
-    top:1px;
-}
-
 </style>
 
 </head>

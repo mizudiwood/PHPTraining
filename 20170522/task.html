@@ -1,13 +1,26 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="task.css" type="text/css" />
+<style>
+    input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+　　color: #666;
+　　}
+　　input:-moz-placeholder, textarea:-moz-placeholder {
+　　color:#666;
+　　}
+　　input::-moz-placeholder, textarea::-moz-placeholder {
+　　color:#666;
+　　}
+　　input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+　　color:#666;
+　　}
 </style>
 </head>
 
 <body>
-
 
 <form action="form_output.php" method="post" class="basic-grey">
 
@@ -15,71 +28,73 @@
 <div class="main">
     <div class="aa">
 <b>姓</b></div>
-<div class="bb"><input type="text" name="name1" placeholder="あなたの苗字" style="width:333px" required><br />
+<div class="bb"><input type="text" name="name1" placeholder="あなたの苗字" onFocus="placeholder=''" onBlur="placeholder='あなたの苗字'" style="width:340px" required><br />
 </div>
 </div>
 
 <div class="main">
     <div class="aa">
 <b>名</b></div>
-<div class="bb"><input type="text" name="name2" placeholder="あなたの名前" style="width:333px" required><br />
+<div class="bb"><input type="text" name="name2" placeholder="あなたの名前" onFocus="placeholder=''" onBlur="placeholder='あなたの名前'" style="width:340px" required><br />
 </div>
 </div>
 
 <div class="main">
     <div class="aa">
-<b>性别</b></div> <div class="bb"><input type="radio" value="男" name="radiosex" checked="checked">男
-<input type="radio" value="女" name="radiosex">女
-<input type="radio" value="不明" name="radiosex">不明</div>
+<b>性别</b></div> <div class="bb"><input type="radio" value="男" name="radiosex" checked="checked"><span>男</span>
+<input type="radio" value="女" name="radiosex"><span>女</span>
+<input type="radio" value="不明" name="radiosex"><span>不明</span></div>
 </div>
 
 <div class="main">
     <div class="aa">
-<b>住所</b></div> <div class="bb"><input type="text" name="add" placeholder="あなたの住所" style="width:333px"><br />
+<b>住所</b></div> <div class="bb"><input type="text" name="add" placeholder="あなたの住所" onFocus="placeholder=''" onBlur="placeholder='あなたの住所'" style="width:340px"><br />
 </div>
 </div>
 
     <div class="main">
         <div class="aa">
-<b>電話番号</b></div>  <div class="bb"><input type="tel" name="tel1" pattern="[0-9]*" maxlength="4" style="width:80px" required> -
-<input type="tel" name="tel2" pattern="[0-9]*" maxlength="4" style="width:80px" required> -
-<input type="tel" name="tel3" pattern="[0-9]*" maxlength="4" style="width:80px" required ><br />
+<b>電話番号</b></div>  <div class="bb">
+    <input type="tel" name="tel1" pattern="[0-9]*" maxlength="4" style="width:97px" required> -
+    <input type="tel" name="tel2" pattern="[0-9]*" maxlength="4" style="width:97px" required> -
+    <input type="tel" name="tel3" pattern="[0-9]*" maxlength="4" style="width:98px" required ><br />
 </div>
 </div>
 
 <div class="main">
     <div class="aa">
-<b>メールアドレス</b> </div>  <div class="bb"><input type="email" name="mail" placeholder="あなたのメールアドレス" style="width:333px" required><br />
+<b>メールアドレス</b> </div>  <div class="bb"><input type="email" name="mail" placeholder="あなたのメールアドレス" onFocus="placeholder=''" onBlur="placeholder='あなたのメールアドレス'" style="width:338px" required><br />
 </div>
 </div>
 
 <div class="main">
     <div class="aa">
 <b>どこで知った</b>　</div>  <div class="bb">
-<input type="checkbox" name="checkbox[]" value="雑誌">雑誌
-<input type="checkbox" name="checkbox[]" value="新聞">新聞
+<input type="checkbox" name="checkbox[]" value="雑誌"><span>雑誌</span>
+<input type="checkbox" name="checkbox[]" value="新聞"><span>新聞</span>
 </div>
 </div>
 
 <div class="main">
     <div class="aa">
 <b>質問カテゴリ</b></div>  <div class="bb">
-<select name="ques" style="width:344px">
-<option value="未選択"></option>
+<select name="ques" >
+<option value="未選択">選択ください</option>
 <option value="Aについて">Aについて</option>
 <option value="Bについて">Bについて</option>
 </select></div>
 </div>
 
-<div class="main">
+<div class="ee">
     <div class="aa">
 <b>質問内容</b><br /></div></div>
-<div class="main">
-    <div class="cc">
-<textarea name="content" placeholder="内容を入力してください。" ></textarea><br />
-</div></div>
-<div style="padding: 5px 3px 3px 30px">
-<input type="reset"  class="button" >&nbsp;&nbsp;&nbsp;<input type="submit" class="button" >
+<div class="ee">
+
+<textarea name="content" placeholder="内容を入力してください。" onFocus="placeholder=''" onBlur="placeholder='内容を入力してください。'" ></textarea><br />
+</div>
+
+<div style="padding: 5px 3px 3px 32px">
+<input type="reset"  class="button" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" class="button" >
 </div>
 </form>
 
