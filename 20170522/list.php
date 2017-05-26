@@ -9,8 +9,11 @@ background: #E27575;
 border: none;
 padding: 10px 25px 10px 25px;
 color: #FFF;
+/*添加方框阴影*/
 box-shadow: 1px 1px 5px #B6B6B6;
+/*添加圆角*/
 border-radius: 3px;
+/*添加字体阴影*/
 text-shadow: 1px 1px 1px #9E3F3F;
 cursor: pointer;
 font-size: 15px;
@@ -85,12 +88,12 @@ box-shadow: 0px 0px 15px #0099ff;
           echo "$arr[0]" . " " . "$arr[1]";
           echo "</td>";
           //性別、住所
-          for($j=2;$j<4;$j++){
+         for($j=2;$j<4;$j++){
 
              echo "<td>";
              echo "$arr[$j]";
              echo "</td>";
-          }
+         }
           //電話番号
           echo "<td>";
           echo "$arr[4]" . "-" . "$arr[5]" . "-" . "$arr[6]";
@@ -101,12 +104,12 @@ box-shadow: 0px 0px 15px #0099ff;
           echo "</td>";
           //どこで知ったか
           $where = $arr[8];
-          if($where==0){
+         if($where==0){
               echo "<td>";
               echo "未選択";
               echo "</td>";
-          }
-          else{
+         }
+         else{
               echo "<td>";
               for($j=9;$j<$where+9;$j++){
 
@@ -116,7 +119,7 @@ box-shadow: 0px 0px 15px #0099ff;
                   }
               }
               echo "</td>";
-          }
+         }
           //質問カテゴリ
           $q=$where + 9;
           echo "<td>";

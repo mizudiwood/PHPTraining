@@ -16,6 +16,7 @@ border-radius: 3px;
 text-shadow: 1px 1px 1px #9E3F3F;
 cursor: pointer;
 text-align: center;
+margin:0px 5px 0px 15px;
 
 /*Transition*/
 -webkit-transition: -webkit-box-shadow 0.5s ease-out;;
@@ -42,8 +43,8 @@ text-align: center;
     <div id = "animate-area">
 <div class="bb">
 
-
  <h3>お問い合わせ</h3>
+
  <div class="ee"><b>・名前：</b> <?php echo $_POST['name1']; ?> &nbsp <?php echo $_POST['name2'];?></div>
 
  <div class="ee"><b>・性别：</b>  <?php echo $_POST['radiosex'];?></div>
@@ -53,7 +54,6 @@ text-align: center;
  <div class="ee"><b>・電話番号：</b>  <?php echo $_POST['tel1'],"-",$_POST['tel2'],"-",$_POST['tel3'];?></div>
 
  <div class="ee"><b>・メールアドレス：</b>  <?php echo $_POST['mail'];?></div>
-
 
  <div class="ee" ><b>・どこで知った：</b>
  <?php
@@ -99,32 +99,29 @@ text-align: center;
  if(isset($_POST['checkbox'])){
      $checkbox = $_POST['checkbox'];
 //     echo "$checkbox" . "<br>";
-  if(count($checkbox)==1){
-     $a = "1" . " " . "$checkbox[0]";
-    }
-  if(count($checkbox)==2){
-       $a = "2" . " " . "$checkbox[0]" . " " . "$checkbox[1]";
-      }
+     if(count($checkbox)==1){
+         $a = "1" . " " . "$checkbox[0]";
+     }
+     if(count($checkbox)==2){
+         $a = "2" . " " . "$checkbox[0]" . " " . "$checkbox[1]";
+     }
  }
  else{
      $a = 0 ;
  }
-
 ?>
 
-<input type="hidden" name="a" value="<?php echo $a; ?>">
-
+ <input type="hidden" name="a" value="<?php echo $a; ?>">
 
  <input name="ques" type="hidden" value="<?php echo $_POST['ques']; ?>">
  <input name="content" type="hidden" value="<?php echo $_POST['content']; ?>">
 
- &nbsp;&nbsp;&nbsp;<input type="submit" class="btn"></button>
-&nbsp;&nbsp;&nbsp;<input type="button" class="btn" onclick="javascript:history.back(-1);" value="戻る">
+ <input type="submit" class="btn"></button>
+ <input type="button" class="btn" onclick="javascript:history.back(-1);" value="戻る">
 
 </form>
 </div>
 </div>
 </body>
-
 
 </html>
