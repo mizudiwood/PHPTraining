@@ -4,6 +4,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="task.css" type="text/css" />
+<link rel="stylesheet" href="radiobox.min.css" media="screen" title="no title" charset="utf-8">
+<link rel="stylesheet" href="checkbox.min.css" media="screen" title="no title" charset="utf-8">
 <style>
     input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
 　　color: #666;
@@ -41,9 +43,10 @@
 
 <div class="main">
     <div class="aa">
-<b>性别</b></div> <div class="bb"><input type="radio" value="男" name="radiosex" checked="checked"><span>男</span>
-<input type="radio" value="女" name="radiosex"><span>女</span>
-<input type="radio" value="不明" name="radiosex"><span>不明</span></div>
+<b>性别</b></div>
+<label><div class="radio-1"><input type="radio" value="男" name="radiosex" checked="checked" class="radiobox-boom"><span>男</span></label>
+<label><input type="radio" value="女" name="radiosex" class="radiobox-boom"><span>女</span></label>
+<label><input type="radio" value="不明" name="radiosex" class="radiobox-boom"><span>不明</span></label></div>
 </div>
 
 <div class="main">
@@ -55,9 +58,9 @@
     <div class="main">
         <div class="aa">
 <b>電話番号</b></div>  <div class="bb">
-    <input type="tel" name="tel1" pattern="[0-9]*" maxlength="4" style="width:98px" placeholder="あなたの電話" onFocus="placeholder=''" onBlur="placeholder='あなたの電話'" style="width:340px" required> -
-    <input type="tel" name="tel2" pattern="[0-9]*" maxlength="4" style="width:99px" required> -
-    <input type="tel" name="tel3" pattern="[0-9]*" maxlength="4" style="width:99px" required ><br />
+    <input type="tel" name="tel1" pattern="[0-9]*" maxlength="4" style="width:99px" placeholder="あなたの電話" onFocus="placeholder=''" onBlur="placeholder='あなたの電話'" style="width:340px" required> -
+    <input type="tel" name="tel2" pattern="[0-9]*" maxlength="4" style="width:100px" required> -
+    <input type="tel" name="tel3" pattern="[0-9]*" maxlength="4" style="width:100px" required ><br />
 </div>
 </div>
 
@@ -70,8 +73,8 @@
 <div class="main">
     <div class="aa">
 <b>どこで知った</b>　</div>  <div class="bb">
-<input type="checkbox" name="checkbox[]" value="雑誌"><span>雑誌</span>
-<input type="checkbox" name="checkbox[]" value="新聞"><span>新聞</span>
+<label><input type="checkbox" class="checkbox-splash" name="checkbox[]" value="雑誌"><span>雑誌</span></label>
+<label><input type="checkbox" class="checkbox-splash" name="checkbox[]" value="新聞"><span>新聞</span></label>
 </div>
 </div>
 

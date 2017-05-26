@@ -23,6 +23,7 @@ background: #CF7A7A
 
 <body>
     <div class="dd" >
+        <!-- <br> -->
      <div class= "ff"><h3 >お問い合わせ一覧</h3></div>
 <div class= "ff">
      <table border="1" align="center" >
