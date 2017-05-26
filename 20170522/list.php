@@ -13,15 +13,28 @@ box-shadow: 1px 1px 5px #B6B6B6;
 border-radius: 3px;
 text-shadow: 1px 1px 1px #9E3F3F;
 cursor: pointer;
+font-size: 15px;
+
+/*Transition*/
+-webkit-transition: -webkit-box-shadow 0.5s ease-out;;
+-moz-transition: -moz-box-shadow 0.5s ease-out;
+-o-transition: box-shadow 0.5s ease-out;
+
 }
 .btn:hover {
 background: #CF7A7A
+-moz-box-shadow: 0px 0px 15px #0099ff;
+-webkit-box-shadow: 0px 0px 15px #0099ff;
+box-shadow: 0px 0px 15px #0099ff;
+
 }
 
 </style>
 </head>
 
 <body>
+
+    <div id = "animate-area">
     <div class="dd" >
         <!-- <br> -->
      <div class= "ff"><h3 >お問い合わせ一覧</h3></div>
@@ -58,7 +71,10 @@ background: #CF7A7A
           $s1 = trim(fgets($myfile));
           $arr = explode(" ", $s1);
 
-          echo "<tr>";
+         if($i % 2 !=0)
+          echo "<tr class='qq'>";
+         else
+          echo "<tr class='rr'>";
           //ID番号
           echo "<td><b>";
           $no = $i +1;
@@ -121,6 +137,7 @@ background: #CF7A7A
 <div class= "ff">
      <input type="button" class="btn" onclick="location.href='task.html'" value="お問い合わせへ戻る" style="font-size: 15px;">
 </div>
+    </div>
     </div>
 </body>
 

@@ -93,21 +93,32 @@ box-shadow: 1px 1px 5px #B6B6B6;
 border-radius: 3px;
 text-shadow: 1px 1px 1px #9E3F3F;
 cursor: pointer;
-margin: auto;
+
+/*Transition*/
+-webkit-transition: -webkit-box-shadow 0.5s ease-out;;
+-moz-transition: -moz-box-shadow 0.5s ease-out;
+-o-transition: box-shadow 0.5s ease-out;
+
 }
 .btn:hover {
 background: #CF7A7A
+-moz-box-shadow: 0px 0px 15px #0099ff;
+-webkit-box-shadow: 0px 0px 15px #0099ff;
+box-shadow: 0px 0px 15px #0099ff;
+
 }
 
 </style>
 
 </head>
 <body>
+    <div id = "animate-area">
     <div class="cc">
     <h4>お問い合わせありがとうございました！</h4>
     <h5>お問い合わせ番号: <?php echo $number; ?></h5>
     <input type="button" class="btn" onclick="location.href='list.php'" value="お問い合わせ一覧">
 
+</div>
 </div>
 </body>
 

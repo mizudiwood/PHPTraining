@@ -16,9 +16,17 @@ border-radius: 3px;
 text-shadow: 1px 1px 1px #9E3F3F;
 cursor: pointer;
 text-align: center;
+
+/*Transition*/
+-webkit-transition: -webkit-box-shadow 0.5s ease-out;;
+-moz-transition: -moz-box-shadow 0.5s ease-out;
+-o-transition: box-shadow 0.5s ease-out;
 }
 .btn:hover {
-background: #CF7A7A
+    background: #CF7A7A
+    -moz-box-shadow: 0px 0px 15px #0099ff;
+    -webkit-box-shadow: 0px 0px 15px #0099ff;
+    box-shadow: 0px 0px 15px #0099ff;
 }
 
 .btn:active {
@@ -31,6 +39,7 @@ background: #CF7A7A
 </head>
 
 <body>
+    <div id = "animate-area">
 <div class="bb">
 
 
@@ -113,6 +122,7 @@ background: #CF7A7A
 &nbsp;&nbsp;&nbsp;<input type="button" class="btn" onclick="javascript:history.back(-1);" value="戻る">
 
 </form>
+</div>
 </div>
 </body>
 
