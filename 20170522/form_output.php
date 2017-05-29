@@ -7,21 +7,21 @@
 <style>
 
 .btn {
-background: #E27575;
-border: none;
-padding: 10px 25px 10px 25px;
-color: #FFF;
-box-shadow: 1px 1px 5px #B6B6B6;
-border-radius: 3px;
-text-shadow: 1px 1px 1px #9E3F3F;
-cursor: pointer;
-text-align: center;
-margin:0px 5px 0px 15px;
+    background: #E27575;
+    border: none;
+    padding: 10px 25px 10px 25px;
+    color: #FFF;
+    box-shadow: 1px 1px 5px #B6B6B6;
+    border-radius: 3px;
+    text-shadow: 1px 1px 1px #9E3F3F;
+    cursor: pointer;
+    text-align: center;
+    margin:0px 5px 0px 15px;
 
 /*Transition*/
--webkit-transition: -webkit-box-shadow 0.5s ease-out;;
--moz-transition: -moz-box-shadow 0.5s ease-out;
--o-transition: box-shadow 0.5s ease-out;
+    -webkit-transition: -webkit-box-shadow 0.5s ease-out;;
+    -moz-transition: -moz-box-shadow 0.5s ease-out;
+    -o-transition: box-shadow 0.5s ease-out;
 }
 .btn:hover {
     background: #CF7A7A
@@ -47,13 +47,13 @@ margin:0px 5px 0px 15px;
 
  <div class="ee"><b>・名前：</b> <?php echo $_POST['name1']; ?> &nbsp <?php echo $_POST['name2'];?></div>
 
- <div class="ee"><b>・性别：</b>  <?php echo $_POST['radiosex'];?></div>
+ <div class="ee"><b>・性别：</b> <?php echo $_POST['radiosex'];?></div>
 
- <div class="ee"><b>・住所：</b>  <?php echo $_POST['add'];?></div>
+ <div class="ee"><b>・住所：</b> <?php echo $_POST['add'];?></div>
 
- <div class="ee"><b>・電話番号：</b>  <?php echo $_POST['tel1'],"-",$_POST['tel2'],"-",$_POST['tel3'];?></div>
+ <div class="ee"><b>・電話番号：</b> <?php echo $_POST['tel1'],"-",$_POST['tel2'],"-",$_POST['tel3'];?></div>
 
- <div class="ee"><b>・メールアドレス：</b>  <?php echo $_POST['mail'];?></div>
+ <div class="ee"><b>・メールアドレス：</b> <?php echo $_POST['mail'];?></div>
 
  <div class="ee" ><b>・どこで知った：</b>
  <?php
@@ -100,10 +100,10 @@ margin:0px 5px 0px 15px;
      $checkbox = $_POST['checkbox'];
 //     echo "$checkbox" . "<br>";
      if(count($checkbox)==1){
-         $a = "1" . " " . "$checkbox[0]";
+         $a = "1" . "," . "$checkbox[0]";
      }
      if(count($checkbox)==2){
-         $a = "2" . " " . "$checkbox[0]" . " " . "$checkbox[1]";
+         $a = "2" . "," . "$checkbox[0]" . "," . "$checkbox[1]";
      }
  }
  else{

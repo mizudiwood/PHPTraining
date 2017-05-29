@@ -13,47 +13,27 @@
 
     if (file_exists($csvfile) ){
         $myfile = fopen( "question.csv", "a" ); // ファイル開く
-
-        $number= $number +1; // 値+1（カウントアップ）
-
-        fwrite($myfile, $_GET['name1'] . " " . $_GET['name2']);//氏名
-        fwrite($myfile, " " . $_GET['radiosex'] . " " . $_GET['add']);//性別、住所
-        fwrite($myfile, " " . $_GET['tel1'] . " " . $_GET['tel2'] . " " . $_GET['tel3']);//電話番号
-        fwrite($myfile, " " . $_GET['mail']);//メールアドレス
-
-        fwrite($myfile, " " . $_GET['a']);//どこで知ったか
-        //質問カテゴリ
-        fwrite($myfile, " " . $_GET['ques']);
-        //質問内容
-        if($_GET['content'] != "")
-            fwrite($myfile, " " . $_GET['content'] . "\r\n");
-        else fwrite($myfile, " " . "未入力" . "\r\n");
-            fclose($myfile);
-    }
+        }
 
     else {
-
         $myfile = fopen("question.csv", "w");
 
-        $number = 1;
-    //           fwrite($myfile, $number . "\r\n");
-
-        fwrite($myfile, $_GET['name1'] . " " . $_GET['name2']);//氏名
-        fwrite($myfile, " " . $_GET['radiosex'] . " " . $_GET['add']);//性別、住所
-        fwrite($myfile, " " . $_GET['tel1'] . " " . $_GET['tel2'] . " " . $_GET['tel3']);//電話番号
-        fwrite($myfile, " " . $_GET['mail']);//メールアドレス
-
-        fwrite($myfile, " " . $_GET['a']);//どこで知ったか
-
-               //質問カテゴリ
-        fwrite($myfile, " " . $_GET['ques']);
-               //質問内容
-        if(isset($_POST['content']))
-            fwrite($myfile, " " . $_GET['content'] . "\r\n");
-        else fwrite($myfile, " " . "未入力" . "\r\n");
-            fclose($myfile);
+        $number = 0;
     }
+        $number= $number +1; // 値+1（カウントアップ）
+        fwrite($myfile, $_GET['name1'] . "," . $_GET['name2']);//氏名
+        fwrite($myfile, "," . $_GET['radiosex'] . "," . $_GET['add']);//性別、住所
+        fwrite($myfile, "," . $_GET['tel1'] . "," . $_GET['tel2'] . "," . $_GET['tel3']);//電話番号
+        fwrite($myfile, "," . $_GET['mail']);//メールアドレス
 
+        fwrite($myfile, "," . $_GET['a']);//どこで知ったか
+        //質問カテゴリ
+        fwrite($myfile, "," . $_GET['ques']);
+        //質問内容
+        if($_GET['content'] != "")
+            fwrite($myfile, "," . $_GET['content'] . "\r\n");
+        else fwrite($myfile, "," . "未入力" . "\r\n");
+            fclose($myfile);
 
     if (file_exists($counterfile) ){
         $fp = fopen( "counter.txt", "r+" ); // ファイル開く
@@ -76,33 +56,6 @@
 <html>
 <head>
 <link rel="stylesheet" href="form.css" type="text/css"/>
-<style>
-
-.btn {
-background: #E27575;
-border: none;
-padding: 10px 25px 10px 25px;
-color: #FFF;
-box-shadow: 1px 1px 5px #B6B6B6;
-border-radius: 3px;
-text-shadow: 1px 1px 1px #9E3F3F;
-cursor: pointer;
-
-/*Transition*/
--webkit-transition: -webkit-box-shadow 0.5s ease-out;;
--moz-transition: -moz-box-shadow 0.5s ease-out;
--o-transition: box-shadow 0.5s ease-out;
-
-}
-.btn:hover {
-background: #CF7A7A
--moz-box-shadow: 0px 0px 15px #0099ff;
--webkit-box-shadow: 0px 0px 15px #0099ff;
-box-shadow: 0px 0px 15px #0099ff;
-
-}
-
-</style>
 
 </head>
 <body>

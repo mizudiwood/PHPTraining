@@ -3,36 +3,6 @@
 <html>
 <head>
 <link rel="stylesheet" href="form.css" type="text/css"/>
-<style type="text/css">
-.btn {
-background: #E27575;
-border: none;
-padding: 10px 25px 10px 25px;
-color: #FFF;
-/*添加方框阴影*/
-box-shadow: 1px 1px 5px #B6B6B6;
-/*添加圆角*/
-border-radius: 3px;
-/*添加字体阴影*/
-text-shadow: 1px 1px 1px #9E3F3F;
-cursor: pointer;
-font-size: 15px;
-
-/*Transition*/
--webkit-transition: -webkit-box-shadow 0.5s ease-out;;
--moz-transition: -moz-box-shadow 0.5s ease-out;
--o-transition: box-shadow 0.5s ease-out;
-
-}
-.btn:hover {
-background: #CF7A7A
--moz-box-shadow: 0px 0px 15px #0099ff;
--webkit-box-shadow: 0px 0px 15px #0099ff;
-box-shadow: 0px 0px 15px #0099ff;
-
-}
-
-</style>
 </head>
 
 <body>
@@ -72,7 +42,7 @@ box-shadow: 0px 0px 15px #0099ff;
     for($i=0;$i<$number;$i++){
 
           $s1 = trim(fgets($myfile));
-          $arr = explode(" ", $s1);
+          $arr = explode(",", $s1);
 
          if($i % 2 !=0)
           echo "<tr class='qq'>";
@@ -84,22 +54,23 @@ box-shadow: 0px 0px 15px #0099ff;
           echo "$no";
           echo "</b></td>";
           //氏名
-          echo "<td>";
+          echo "<td onmouseover='this.title=this.innerHTML'>";
           echo "$arr[0]" . " " . "$arr[1]";
           echo "</td>";
-          //性別、住所
-         for($j=2;$j<4;$j++){
-
-             echo "<td>";
-             echo "$arr[$j]";
-             echo "</td>";
-         }
+          //性別
+          echo "<td>";
+          echo " " . "$arr[2]";
+          echo "</td>";
+          //住所
+          echo "<td onmouseover='this.title=this.innerHTML'>";
+          echo "$arr[3]";
+          echo "</td>";
           //電話番号
           echo "<td>";
           echo "$arr[4]" . "-" . "$arr[5]" . "-" . "$arr[6]";
           echo "</td>";
           //メールアドレス
-          echo "<td>";
+          echo "<td onmouseover='this.title=this.innerHTML'>";
           echo "$arr[7]";
           echo "</td>";
           //どこで知ったか
@@ -127,7 +98,7 @@ box-shadow: 0px 0px 15px #0099ff;
           echo "</td>";
           //質問内容
           $qw=$where + 10;
-          echo "<td>";
+          echo "<td  onmouseover='this.title=this.innerHTML'>";
           echo "$arr[$qw]";
           echo "</td>";
 
