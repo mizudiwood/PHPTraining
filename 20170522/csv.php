@@ -5,7 +5,7 @@
     if (file_exists($counterfile) ){
         $fp = fopen( "counter.txt", "r+" ); // ファイル開く
 
-        $total = fgets( $fp, 100000 ); // 9桁分値読み取り
+        $total = fgets( $fp, 100000 ); // 値を読み取り
         $number = intval($total);
 
         fclose( $fp );
@@ -16,7 +16,7 @@
         }
 
     else {
-        $myfile = fopen("question.csv", "w");
+        $myfile = fopen("question.csv", "w"); // ファイル作る
 
         $number = 0;
     }
