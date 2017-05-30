@@ -109,7 +109,7 @@
      </table>
      </div>
 <div class= "ff">
-     <input type="button" class="btn" onclick="location.href='task.html'" value="お問い合わせへ戻る" style="font-size: 15px;">
+     <input type="button" class="btn" onclick="location.href='task1.html'" value="お問い合わせへ戻る" style="font-size: 15px;">
 </div>
     </div>
     </div>
