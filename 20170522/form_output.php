@@ -114,7 +114,11 @@
  <input type="hidden" name="a" value="<?php echo $a; ?>">
 
  <input name="ques" type="hidden" value="<?php echo $_POST['ques']; ?>">
- <input name="content" type="hidden" value="<?php echo $_POST['content']; ?>">
+
+<?php
+ $str = str_replace("\r\n","<br>",$_POST['content']);
+?>
+ <input name="content" type="hidden" value="<?php echo $str; ?>">
 
  <input type="submit" class="btn"></button>
  <input type="button" class="btn" onclick="javascript:history.back(-1);" value="戻る">
