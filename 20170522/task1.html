@@ -3,7 +3,7 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="task.css" type="text/css" />
+<link rel="stylesheet" href="task1.css" type="text/css" />
 <link rel="stylesheet" href="radiobox.min.css" media="screen" title="no title" charset="utf-8">
 <link rel="stylesheet" href="checkbox.min.css" media="screen" title="no title" charset="utf-8">
 
@@ -18,8 +18,8 @@
     border-radius: 3px;
     text-shadow: 1px 1px 1px #9E3F3F;
     cursor: pointer;
-    text-align: center;
-    margin:0px 0px 0px 70px;
+    float:right;
+    /*margin:0px 0px 0px 70px;*/
 
 /*Transition*/
     -webkit-transition: -webkit-box-shadow 0.5s ease-out;;
@@ -52,7 +52,7 @@
     <div class="aa">
         <b>姓</b></div>
     <div class="bb">
-        <input type="text" name="name1" placeholder="あなたの苗字" onFocus="placeholder=''" onBlur="placeholder='あなたの苗字'" style="width:340px" required><br />
+        <input type="text" name="name1" placeholder="あなたの苗字" onFocus="placeholder=''" onBlur="placeholder='あなたの苗字'" required><br />
     </div>
 </div>
 
@@ -60,7 +60,7 @@
     <div class="aa">
         <b>名</b></div>
     <div class="bb">
-        <input type="text" name="name2" placeholder="あなたの名前" onFocus="placeholder=''" onBlur="placeholder='あなたの名前'" style="width:340px" required><br />
+        <input type="text" name="name2" placeholder="あなたの名前" onFocus="placeholder=''" onBlur="placeholder='あなたの名前'" required><br />
     </div>
 </div>
 
@@ -78,17 +78,23 @@
     <div class="aa">
         <b>住所</b></div>
     <div class="bb">
-        <input type="text" name="add" placeholder="あなたの住所" onFocus="placeholder=''" onBlur="placeholder='あなたの住所'" style="width:340px"><br />
+        <input type="text" name="add" placeholder="あなたの住所" onFocus="placeholder=''" onBlur="placeholder='あなたの住所'"><br />
     </div>
 </div>
 
 <div class="main">
     <div class="aa">
         <b>電話番号</b></div>
-    <div class="bb">
-        <input type="tel" name="tel1" pattern="[0-9]*" maxlength="4" style="width:99px" placeholder="あなたの電話" onFocus="placeholder=''" onBlur="placeholder='あなたの電話'" style="width:340px" required> -
-        <input type="tel" name="tel2" pattern="[0-9]*" maxlength="4" style="width:100px" required> -
-        <input type="tel" name="tel3" pattern="[0-9]*" maxlength="4" style="width:100px" required ><br />
+        <div class="box">
+    <div class="box1">
+        <input type="tel" name="tel1" pattern="[0-9]*" maxlength="4" placeholder="あなたの電話" onFocus="placeholder=''" onBlur="placeholder='あなたの電話'" required> </div>
+    <div class="box2">-</div>
+    <div class="box1">
+        <input type="tel" name="tel2" pattern="[0-9]*" maxlength="4" required> </div>
+    <div class="box2">-</div>
+    <div class="box1">
+        <input type="tel" name="tel3" pattern="[0-9]*" maxlength="4" required ><br />
+    </div>
     </div>
 </div>
 
@@ -96,7 +102,7 @@
     <div class="aa">
         <b>メールアドレス</b> </div>
     <div class="bb">
-        <input type="email" name="mail" placeholder="あなたのメールアドレス" onFocus="placeholder=''" onBlur="placeholder='あなたのメールアドレス'" style="width:340px" required><br />
+        <input type="email" name="mail" placeholder="あなたのメールアドレス" onFocus="placeholder=''" onBlur="placeholder='あなたのメールアドレス'" required><br />
     </div>
 </div>
 
@@ -113,7 +119,7 @@
     <div class="aa">
         <b>質問カテゴリ</b></div>
     <div class="bb">
-        <select name="ques" style="width:348px">
+        <select name="ques">
             <option value="未選択">選択ください</option>
             <option value="Aについて">Aについて</option>
             <option value="Bについて">Bについて</option>
@@ -130,8 +136,12 @@
         <textarea name="content" placeholder="内容を入力してください。" onFocus="placeholder=''" onBlur="placeholder='内容を入力してください。'" ></textarea><br />
 </div>
 <div class="main">
-<div style="padding: 5px 0px 3px 12px">
-    <input type="reset"  class="button" ><input type="submit" class="button" ><input type="button" class="btn" onclick="location.href='list.php'" value="お問い合わせ一覧">
+<div class="box3">
+    <input style="margin: 0px 0px 0px 12px" type="reset"  class="button" ></div>
+<div class="box3">
+    <input type="submit" class="button" ></div>
+<div class="box4">
+    <input type="button" class="btn" onclick="location.href='list.php'" value="お問い合わせ一覧"></div>
 </div>
 </div>
 </form>

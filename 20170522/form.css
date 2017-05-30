@@ -49,10 +49,9 @@ h5{text-align:center; border-bottom:1px solid #E5E5E5}
 
 table{
     border-collapse:collapse;
-    /*table-layout:fixed;*/
     height:100px;
     width:1200px;
-    /*table-layout : fixed;*/
+    table-layout : fixed;
     /*table-layout: auto;*/
 }
 table th{
