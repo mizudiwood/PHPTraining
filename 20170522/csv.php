@@ -63,6 +63,7 @@
     <div class="cc">
     <h4>お問い合わせありがとうございました！</h4>
     <h5>お問い合わせ番号: <?php echo $number; ?></h5>
+    <!-- お問い合わせ一覧ページへ -->
     <input type="button" class="btn" onclick="location.href='list.php'" value="お問い合わせ一覧">
 
 </div>
